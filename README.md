@@ -39,3 +39,58 @@ output:
 ```
 deployment "helloworld-deployment" successfully rolled out
 ```
+
+### Change image:
+
+```
+kubectl set image deployment/helloworld-deployment k8s-demo=cmaliwal/docker-demo:2
+```
+
+output:
+
+```
+deployment.extensions/helloworld-deployment image updated
+```
+
+```
+kubectl rollout status deployment/helloworld-deployment
+```
+
+Output:
+
+```
+deployment "helloworld-deployment" successfully rolled out
+```
+
+
+### Expose port:
+
+```
+kubectl expose deployment helloworld-deployment --type=NodePort
+```
+
+Output:
+
+```
+service/helloworld-deployment exposed
+```
+
+```
+minikube service helloworld-deployment --url
+```
+
+Output:
+
+```
+http://192.168.99.101:32659
+```
+
+```
+curl http://192.168.99.101:32659
+```
+
+output:
+
+```
+Hello World!
+```
