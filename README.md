@@ -94,3 +94,16 @@ output:
 ```
 Hello World!
 ```
+
+### Check rollout history:
+
+```
+kubectl rollout history deployment/helloworld-deployment
+```
+
+```
+deployment.extensions/helloworld-deployment 
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+```
