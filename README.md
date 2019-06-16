@@ -107,3 +107,25 @@ REVISION  CHANGE-CAUSE
 1         <none>
 2         <none>
 ```
+
+### Rolled back the deployment:
+
+```
+kubectl rollout undo deployment/helloworld-deployment
+```
+
+outout:
+
+```
+deployment.extensions/helloworld-deployment rolled back
+```
+
+check rollout status:
+
+```
+kubectl rollout status deployment/helloworld-deployment
+```
+
+```
+deployment "helloworld-deployment" successfully rolled out
+```
