@@ -126,6 +126,20 @@ check rollout status:
 kubectl rollout status deployment/helloworld-deployment
 ```
 
+output:
+
 ```
 deployment "helloworld-deployment" successfully rolled out
+```
+
+### Delete deployment:
+
+```
+kubectl delete deployment helloworld-deployment
+```
+
+Output:
+
+```
+deployment.extensions "helloworld-deployment" deleted
 ```
